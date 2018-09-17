@@ -1,13 +1,11 @@
 #include "Test.h"
-#include <iostream>
-using namespace std;
-
 
 void Test::testAll(){
     testVector();
     testHeap();
     testCollection();
     testSLinkedList();
+    testSet();
 }
 
 void Test::testVector(){
@@ -86,4 +84,27 @@ void Test::testSLinkedList(){
     assert(l.find(6) == true);
     assert(l.Lenght() == 6);
     
+}
+
+void Test::testSet(){
+    Set<int> s;
+    s.add(1);
+    assert(s.Length() == 1);
+    assert(s[0] == 1);
+    s.add(2);
+    s.add(3);
+    assert(s.Length() == 3);
+
+    try{
+        s.add(2);
+        assert(false);
+    }catch(...){
+        assert(true);
+    }
+    try{
+        assert(s[10] == 1);
+    }catch(...){
+        assert(true);
+    }
+    assert(s.find(2) == true);
 }

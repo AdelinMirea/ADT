@@ -4,6 +4,7 @@
 #include "Heap.h"
 #include "Collection.h"
 #include "SinglyLinkedList.h"
+#include "Set.h"
 
 class Test{
 private:
@@ -11,6 +12,8 @@ private:
     void testHeap();
     void testCollection();
     void testSLinkedList();
+    void testSet();
+
 
 public:
 
