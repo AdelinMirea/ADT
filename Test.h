@@ -5,6 +5,7 @@
 #include "Collection.h"
 #include "SinglyLinkedList.h"
 #include "Set.h"
+#include "Map.h"
 
 class Test{
 private:
@@ -13,7 +14,7 @@ private:
     void testCollection();
     void testSLinkedList();
     void testSet();
-
+    void testMap();
 
 public:
 

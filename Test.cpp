@@ -6,6 +6,7 @@ void Test::testAll(){
     testCollection();
     testSLinkedList();
     testSet();
+    testMap();
 }
 
 void Test::testVector(){
@@ -107,4 +108,19 @@ void Test::testSet(){
         assert(true);
     }
     assert(s.find(2) == true);
+}
+
+void Test::testMap(){
+    Map<int> m;
+    m.add(Pair<int>(1, 1));
+    m.add(Pair<int>(2, 1));
+    m.add(Pair<int>(3, 1));
+
+    assert(m.Length() == 3);
+
+    m.add(Pair<int>(4, 2));
+    m.add(Pair<int>(5, 3));
+
+    assert(m.Length() == 5);
+    assert(m.element(3) == 1);
 }
