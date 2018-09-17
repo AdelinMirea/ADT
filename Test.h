@@ -6,6 +6,7 @@
 #include "SinglyLinkedList.h"
 #include "Set.h"
 #include "Map.h"
+#include "Stack.h"
 
 class Test{
 private:
@@ -15,6 +16,7 @@ private:
     void testSLinkedList();
     void testSet();
     void testMap();
+    void testStack();
 
 public:
 

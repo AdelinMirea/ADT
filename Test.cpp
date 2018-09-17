@@ -7,6 +7,7 @@ void Test::testAll(){
     testSLinkedList();
     testSet();
     testMap();
+    testStack();
 }
 
 void Test::testVector(){
@@ -123,4 +124,19 @@ void Test::testMap(){
 
     assert(m.Length() == 5);
     assert(m.element(3) == 1);
+    assert(m[4] == 2);
+}
+
+void Test::testStack(){
+    Stack<int> s;
+    assert(s.empty() == true);
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    assert(s.top() == 3);
+    assert(s.pop() == 3);
+    s.pop();
+    assert(s.Length() == 1);
+    assert(s.top() == 1);
+    assert(s.empty() == false);
 }

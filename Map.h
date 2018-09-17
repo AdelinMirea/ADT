@@ -30,6 +30,8 @@ class Map{
         //Keys, Values, Pairs?
 
         T element(int key);
+
+        T operator[](int key);
 };
 
 template <class T>
@@ -118,4 +120,12 @@ int Map<T>::find(int key){
         }
     }
     return -1;
+}
+
+template <class T>
+T Map<T>::operator[](int key){
+    int pos = find(key);
+    if(pos != -1){
+        return elems[pos].getValue();
+    }
 }
