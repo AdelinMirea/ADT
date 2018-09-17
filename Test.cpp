@@ -1,8 +1,13 @@
 #include "Test.h"
+#include <iostream>
+using namespace std;
+
 
 void Test::testAll(){
     testVector();
     testHeap();
+    testCollection();
+    testSLinkedList();
 }
 
 void Test::testVector(){
@@ -47,4 +52,38 @@ void Test::testHeap(){
     int t = h.remove();
     assert(t == 5);
     //h.print();
+}
+
+void Test::testCollection(){
+    Collection<int> c;
+    c.add(1);
+    c.add(2);
+    c.add(3);
+    c.add(1);
+    c.add(4);
+    c.add(1);
+    assert(c.dim() == 6);
+
+    assert(c.find(1) == true);
+
+    c.remove(1);
+    assert(c.dim() == 5);
+    assert(c.voidCollection() == false);
+}
+
+void Test::testSLinkedList(){
+    LinkedList<int> l;
+    
+    l.add(1);
+    l.add(2);
+    l.add(3);
+    l.add(4);
+    l.add(5);
+    l.add(6);
+    l.first();
+   
+    assert(l.find(5) == true);
+    assert(l.find(6) == true);
+    assert(l.Lenght() == 6);
+    
 }
