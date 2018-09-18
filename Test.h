@@ -8,6 +8,8 @@
 #include "Map.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "PriorityQueue.h"
+
 
 class Test{
 private:
@@ -19,6 +21,7 @@ private:
     void testMap();
     void testStack();
     void testQueue();
+    void testPriorityQueue();
 
 public:
 
