@@ -7,6 +7,7 @@
 #include "Set.h"
 #include "Map.h"
 #include "Stack.h"
+#include "Queue.h"
 
 class Test{
 private:
@@ -17,6 +18,7 @@ private:
     void testSet();
     void testMap();
     void testStack();
+    void testQueue();
 
 public:
 

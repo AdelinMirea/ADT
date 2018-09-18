@@ -1,5 +1,8 @@
 #include "Test.h"
 
+#include <iostream>
+using namespace std;
+
 void Test::testAll(){
     testVector();
     testHeap();
@@ -8,6 +11,7 @@ void Test::testAll(){
     testSet();
     testMap();
     testStack();
+    testQueue();
 }
 
 void Test::testVector(){
@@ -139,4 +143,18 @@ void Test::testStack(){
     assert(s.Length() == 1);
     assert(s.top() == 1);
     assert(s.empty() == false);
+}
+
+void Test::testQueue(){
+    Queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    assert(q.Length() == 3);
+    assert(q.front() == 1);
+    assert(q.back() == 3);
+    q.push(4);
+    assert(q.empty() == false);
+    assert(q.pop() == 1);
+    
 }
